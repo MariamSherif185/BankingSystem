@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!-- Mariam Sherif Ahmed, 20180370, S3-->
+<html>
+    <head>
+        <title>Online banking system</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-image: url('balance.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;  
+                text-align: center;
+            }
+            h1{
+                padding: 30px;
+                color: white;
+            }
+            .center {
+                //border: 5px outset #F5F5F5;
+                background-color: #F5F5F5;
+                opacity: 0.5;
+                text-align: center;
+                width: 30%;
+                margin: auto;
+                padding: 50px;
+                position: fixed;
+                top: 25%;
+                bottom: 45%;
+                right: 25%;
+                left: 25%;
+            }
+            .center table{
+                margin: 5%;
+                font-weight: bold;
+                color: #000000;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Welcome to our online banking system</h1>
+        <form class="center" action="validate" method="get">
+            <table cellspacing="5" border="0">
+                <tr>
+                    <td align="right">ID:</td>
+                    <td><input type="text" name="id"></td>
+                </tr>
+                <tr>
+                    <td align="right">Password:</td>
+                    <td><input type="password" name="password" value="" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Login" name="login" /></td>
+                </tr>
+            </table>
+        </form>
+
+    </body>
+</html>

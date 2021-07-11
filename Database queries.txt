@@ -1,0 +1,52 @@
+CREATE TABLE `bankaccount` (
+  `BankAccountID` varchar(45) NOT NULL,
+  `BACreationDate` varchar(45) NOT NULL,
+  `BACurrentBalance` double NOT NULL,
+  `CustomerID` varchar(45) NOT NULL,
+  PRIMARY KEY (`BankAccountID`,`CustomerID`)
+) 
+ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+insert into bankaccount values('1',"2000-3-14",4000,'1');
+insert into bankaccount values('2',"2008-12-5",11300,'2');
+insert into bankaccount values('3',"2000-12-22",1300,'3');
+insert into bankaccount values('4',"2000-12-22",700,'4');
+insert into bankaccount values('5',"2000-12-22",100,'5');
+
+
+
+CREATE TABLE `banktransaction` (
+  `BankTransactionID` int NOT NULL AUTO_INCREMENT,
+  `BTCreationDate` date NOT NULL,
+  `BTAmount` double NOT NULL,
+  `BTFromAccount` varchar(45) NOT NULL,
+  `BTToAccount` varchar(45) NOT NULL,
+  PRIMARY KEY (`BankTransactionID`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+insert into banktransaction values("2020-12-22",1000,'1','5');
+insert into banktransaction values("2020-12-22",500,'2','4');
+insert into banktransaction values("2020-12-17",400,'3','2');
+insert into banktransaction values("2020-12-23",300,'4','3');
+insert into banktransaction values("2020-12-25",3000,'1','2');
+
+CREATE TABLE `customer` (
+  `CustomerID` varchar(45) NOT NULL,
+  `CustomerName` varchar(100) NOT NULL,
+  `CustomerAddress` varchar(100) NOT NULL,
+  `CustomerMobile` varchar(11) NOT NULL,
+  `CustomerPass` varchar(100) NOT NULL,
+  PRIMARY KEY (`CustomerID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+insert into customer values('1',"mariam","motamayz","01154578201","mariam");
+insert into customer values('2',"ahmed","6 october","01012230181","ahmed");
+insert into customer values('3',"omar","motamayz","01100908066","omar");
+insert into customer values('4',"mohamed","dream","01122237242","mohamed");
+insert into customer values('5',"ganna","6 october","01127791008","ganna");
+insert into customer values('6',"ganna","6 october","01127791008","ganna");
+
+
